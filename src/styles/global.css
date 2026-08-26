@@ -1,0 +1,105 @@
+/* Global design tokens, reset rules, and system-level color preferences. */
+:root {
+  --surface: #fbfafc;
+  --surface-raised: #ffffff;
+  --sidebar: #f5f4f8;
+  --sidebar-active: #ffffff;
+  --sidebar-text: #6f6a7a;
+  --field-bg: #f5f4f8;
+  --count-bg: #ebe9ef;
+  --text-strong: #24212c;
+  --text-muted: #76717f;
+  --text-faint: #a09ba9;
+  --border: #e6e3ea;
+  --border-soft: #efedf1;
+  --border-strong: #d9d5df;
+  --check-border: #c8c2d0;
+  --accent: #755ee5;
+  --accent-strong: #664ed6;
+  --accent-hover: #674fd6;
+  --accent-soft: #eeeaff;
+  --accent-border: #b8aaf5;
+  --danger: #d45d64;
+  --danger-soft: #fff0f0;
+  --font-sans: Inter, Avenir, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-display: 'Segoe UI', Inter, Avenir, sans-serif;
+  --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
+
+  color: var(--text-strong);
+  font-family: var(--font-sans);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  min-height: 100%;
+  background: #efedf3;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(circle at 10% 10%, rgba(133, 109, 238, 0.08), transparent 29%),
+    #efedf3;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  color: #ffffff;
+  background: var(--accent);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --surface: #17151c;
+    --surface-raised: #201e26;
+    --sidebar: #1b1921;
+    --sidebar-active: #27242e;
+    --sidebar-text: #aaa5b3;
+    --field-bg: #29262f;
+    --count-bg: #2d2a33;
+    --text-strong: #f5f1fa;
+    --text-muted: #aaa4b3;
+    --text-faint: #77717f;
+    --border: #302d37;
+    --border-soft: #2a2730;
+    --border-strong: #413d49;
+    --check-border: #575160;
+    --accent: #927cf5;
+    --accent-strong: #a792ff;
+    --accent-hover: #8068ed;
+    --accent-soft: rgba(137, 111, 245, 0.15);
+    --accent-border: #6958ad;
+    --danger: #ef858b;
+    --danger-soft: rgba(221, 91, 100, 0.12);
+
+    color-scheme: dark;
+  }
+
+  html,
+  body {
+    background: #121016;
+  }
+
+  .app-shell {
+    box-shadow: none;
+  }
+}
